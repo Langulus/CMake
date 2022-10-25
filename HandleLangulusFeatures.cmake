@@ -1,5 +1,8 @@
 function(handle_langulus_features)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 if (CMAKE_CXX_FLAGS)
     STRING(FIND ${CMAKE_CXX_FLAGS} "/Zc:trigraphs" TRIGRAPHS_ENABLED)
     if (${TRIGRAPHS_ENABLED} GREATER -1)
