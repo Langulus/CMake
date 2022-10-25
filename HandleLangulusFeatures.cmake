@@ -12,6 +12,12 @@ if (CMAKE_CXX_FLAGS)
     endif()
 endif()
 
+if (MSVC)
+    add_compile_options(/utf-8 /W4)
+else()
+    add_compile_options(-Wall -Wextra)
+endif()
+
 # Configure the features you require, all these are disabled by default
 option(LANGULUS_ENABLE_SAFE_MODE 
     "Overrides additional error checking and sanity checks, \
