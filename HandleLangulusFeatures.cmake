@@ -18,7 +18,7 @@ endif()
 if (MSVC)
     add_compile_options(/utf-8 /W4)
 else()
-    add_compile_options(-Wall -Wextra)
+    add_compile_options(-Wall -Wextra -Wno-trigraphs)
 endif()
 
 # Configure the features you require, all these are disabled by default
