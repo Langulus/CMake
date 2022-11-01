@@ -121,4 +121,9 @@ if(LANGULUS_FEATURE_MEMORY_STATISTICS)
     add_compile_definitions(LANGULUS_ENABLE_FEATURE_MEMORY_STATISTICS)
 endif()
 
+if(LANGULUS_BUILD_SHARED_LIBRARIES)
+    message(STATUS "[FEATURE] Building shared libraries")
+    add_compile_definitions(LANGULUS_BUILD_SHARED_LIBRARIES)
+endif()
+
 endfunction()
