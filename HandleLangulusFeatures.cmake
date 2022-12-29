@@ -18,7 +18,13 @@ endif()
 if (MSVC)
     add_compile_options(/utf-8 /W4)
 else()
-    add_compile_options(-Wall -Wextra -Wno-trigraphs)
+    add_compile_options(-Wall -Wextra)
+endif()
+
+if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    add_compile_options(-Wno-trigraphs)
+elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    add_compile_options(-Wno-trigraphs)
 endif()
 
 # Configure the features you require, all these are disabled by default
